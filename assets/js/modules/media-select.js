@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
   };
-
+  console.log(createVideoCard);
   const renderMedia = async (type) => {
     mediaGrid.innerHTML = '<div class="loading-spinner">Loading...</div>';
 
