@@ -1,0 +1,419 @@
+// ============== UTILITIES ==============
+@use "utilities/variables" as vars;
+@use "utilities/mixins";
+@use "utilities/animations";
+
+// ============== COMPONENTS ==============
+@use "components/header";
+@use "components/footer";
+@use "components/forms";
+@use "components/cards";
+@use "components/new-features";
+
+// ============== PAGES ==============
+@use "pages/home";
+@use "pages/contact";
+
+// ============== New-Features ==============
+ 
+
+// ============== BASE STYLES ==============
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--background-light);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-top: -50px;
+  position: relative;
+  z-index: 3;
+}
+
+// ============== PAYMENT MODAL ==============
+// Payment Modal Styles
+#donation-form {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 400px;
+  height: 490px;
+  background: rgba(117, 103, 103, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  animation: fadeInScale 0.4s ease-out forwards;
+  transition: none !important;
+}
+#donation-form-header {
+  cursor: move;
+}
+
+#donation-form .donation-box {
+  background: #a99494;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  animation: pulse 2s infinite;
+}
+
+#donation-form h2 {
+  font-size: 2rem;
+  color: #ff5722;
+  margin-bottom: 1rem;
+}
+
+#donation-form p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#donation-form button {
+  background-color: #ff5722;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+// #donation-form button:hover {
+//   background-color: #e64a19;
+// }
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  }
+}
+#payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; // Hidden by default
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.visible {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+
+    .close-modal {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #666;
+
+      &:hover {
+        color: #333;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    #payment-element {
+      margin-bottom: 1.5rem;
+
+      // Stripe will inject its own elements here
+      .StripeElement {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: white;
+      }
+    }
+
+    #submit-payment {
+      width: 100%;
+      padding: 12px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #2980b9;
+      }
+
+      &:disabled {
+        background: #95a5a6;
+        cursor: not-allowed;
+      }
+    }
+
+    #payment-message {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      border-radius: 4px;
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+
+      &.error {
+        background: #f8d7da;
+        color: #721c24;
+      }
+
+      &.success {
+        background: #d4edda;
+        color: #155724;
+      }
+
+      &.info {
+        background: #e2e3e5;
+        color: #383d41;
+      }
+    }
+  }
+}
+.spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+//  Donate section CSS starts here
+/* Base styles for the donation container (initially hidden) */
+.donation-container {
+  display: none;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* When visible */
+.donation-container.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Payment button styles */
+#pay-button,
+#donate-button,
+#donate-button2 {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #1082e6 0%, #14a66e 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#pay-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #3a7bd5 0%, #00d2ff 100%);
+}
+
+#pay-button:active {
+  transform: translateY(0);
+}
+
+/* Input field styles */
+.donation-container input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 2px solid #e0e6ed;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.donation-container input:focus {
+  border-color: #4facfe;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+  background-color: white;
+}
+
+/* Header text (you can add this above the form) */
+.donation-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.donation-header h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.donation-header p {
+  font-size: 15px;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Animation for showing the form */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// Donate section CSS ends here
+
+// Notification Nodal starts here
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeInUp 0.4s ease forwards;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal-content h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.modal-content p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #000;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+// Nodtification Nodal ends here

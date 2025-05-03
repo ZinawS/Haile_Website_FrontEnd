@@ -1,0 +1,412 @@
+// assets/css/pages/_home.scss
+@use "../utilities/variables" as vars;
+.hero {
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  background-color: rgba(133, 83, 60, 0.8);
+  background-image: url("../images/hero_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 270px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--text-light);
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      box-shadow: var(--shadow);
+    }
+    .cta-button:hover,
+    .cta-button:focus {
+      background-color: #c0392b;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-button:focus {
+      outline: 2px solid var(--secondary);
+      outline-offset: 2px;
+    }
+  }
+}
+/* The Aim section style starts here*/
+.aim-section {
+  max-width: 1500px;
+  margin: auto;
+  padding: 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+  // background: #f9f9f9;
+  border-radius: 16px;
+  // box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.aim-content {
+  max-height: none;
+  overflow: visible;
+  transition: max-height 0.4s ease;
+}
+
+.aim-content.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 10.5em; /* Approx. 6 lines */
+}
+
+.read-more-btn {
+  margin-top: 1rem;
+  background: rgb(147, 166, 160, 0.1);
+
+  // color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+// .read-more-btn:hover {
+//   background: #003ecc;
+// }
+
+/* Tree Section */
+.tree-section {
+  margin: 3rem 0;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+}
+
+.tree-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.tree-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  border-radius: 2px;
+}
+
+#tree-container {
+  width: 100%;
+  margin: 2rem 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tree-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#toggle-all {
+  margin: 1rem auto;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+#toggle-all:hover,
+#toggle-all:focus {
+  background-color: #2980b9;
+}
+
+#toggle-all:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* Tree Node Styles */
+.node {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  position: relative;
+  text-align: left;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.node:hover,
+.node:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.node:focus {
+  outline: 2px solid var(--primary);
+}
+
+.branch-node {
+  border-left: 4px solid var(--primary);
+}
+
+.leaf-node {
+  border-left: 4px solid var(--gradient-end);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.node-header h3 {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  flex-grow: 1;
+}
+
+.node p {
+  margin: 0 0 0.5rem;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.toggle-details {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-details:hover,
+.toggle-details:focus {
+  color: #2980b9;
+}
+
+.toggle-details:focus {
+  outline: 2px solid var(--primary);
+}
+
+.node-details {
+  display: none;
+  margin-top: 1rem;
+}
+
+.node-details.active {
+  display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+.node:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -10px;
+  width: 2px;
+  height: 1rem;
+  background: var(--primary);
+  animation: drawLine 0.5s ease-out;
+}
+
+.founder-section {
+  margin: 4rem 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+  }
+
+  .founder-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .founder-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+  }
+
+  .founder-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .badge {
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &.engineering {
+      background-color: var(--primary);
+    }
+
+    &.theology {
+      background-color: var(--gradient-end);
+    }
+
+    &.aviation {
+      background-color: var(--secondary);
+    }
+  }
+
+  .founder-bio {
+    flex: 2;
+    min-width: 300px;
+    max-width: 600px;
+
+    p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+    }
+  }
+
+  .vision-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
+    position: relative;
+
+    &:hover {
+      transform: translateX(5px);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-size: 4rem;
+      color: rgba(52, 152, 219, 0.2);
+      font-family: serif;
+      font-weight: bold;
+    }
+
+    .vision-statement {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--text-dark);
+      margin: 0;
+      padding-left: 1rem;
+    }
+  }
+
+  .closing-statement {
+    font-weight: 600;
+    color: var(--primary);
+  }
+}

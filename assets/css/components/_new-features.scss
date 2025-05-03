@@ -1,0 +1,265 @@
+$primary-blue: #1e40af;
+$gray-800: #1f2937;
+$gray-600: #4b5563;
+$gray-100: #f3f4f6;
+$white: #ffffff;
+$blue-600: #2563eb;
+$blue-700: #1d4ed8;
+$blue-300: #93c5fd;
+$blue-100: #dbeafe;
+
+// Mixin for fade-in animation
+@mixin fade-in {
+  animation: fadeIn 0.5s ease-in;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+// Event Pop-Up
+#event-popup {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: $white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid $primary-blue;
+  @include fade-in;
+
+  h2 {
+    color: $gray-800;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  a {
+    margin-top: 1rem;
+    display: inline-block;
+    background: $blue-600;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    &:hover {
+      background: $blue-700;
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    color: $gray-600;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+#popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  @include fade-in;
+}
+
+// Video Modal
+.video-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  @include fade-in;
+
+  .video-modal-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    iframe,
+    video,
+    audio {
+      width: 100%;
+      height: 450px;
+      @media (max-width: 768px) {
+        height: 300px;
+      }
+      @media (max-width: 480px) {
+        height: 200px;
+      }
+    }
+
+    p {
+      padding: 1rem;
+      text-align: center;
+      color: $gray-800;
+    }
+  }
+
+  .video-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: $gray-800;
+    cursor: pointer;
+    &:hover {
+      color: $blue-600;
+    }
+  }
+}
+
+// Media Section
+.media-select-wrapper {
+  margin-bottom: 1.5rem;
+  max-width: 300px;
+
+  .media-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $gray-600;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: $white;
+    cursor: pointer;
+
+    &:focus {
+      outline: 2px solid $blue-600;
+      outline-offset: 2px;
+    }
+  }
+
+  // Style Select2 dropdown
+  .select2-container--default {
+    .select2-selection--single {
+      border: 1px solid $gray-600;
+      border-radius: 4px;
+      height: 38px;
+
+      .select2-selection__rendered {
+        line-height: 36px;
+        padding-left: 12px;
+        color: $gray-800;
+      }
+
+      .select2-selection__arrow {
+        height: 36px;
+        right: 10px;
+      }
+    }
+
+    &.select2-container--focus {
+      .select2-selection--single {
+        border-color: $blue-600;
+        outline: 2px solid $blue-600;
+        outline-offset: 2px;
+      }
+    }
+
+    .select2-dropdown {
+      border: 1px solid $gray-600;
+      border-radius: 4px;
+      background: $white;
+
+      .select2-results__option {
+        padding: 8px 12px;
+        color: $gray-800;
+
+        &[aria-selected="true"] {
+          background: $primary-blue;
+          color: $white;
+        }
+
+        &:hover {
+          background: $blue-100;
+        }
+      }
+    }
+  }
+}
+
+.media-content {
+  .video-grid {
+    &[aria-live="polite"] {
+      min-height: 200px; // Prevent layout shift
+    }
+
+    .video-error {
+      text-align: center;
+      color: $gray-600;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+
+// Call to Action Banner
+.cta-banner {
+  background: $primary-blue;
+  color: $white;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  border-radius: 8px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 0.5rem;
+  }
+
+  a {
+    color: $blue-300;
+    text-decoration: underline;
+
+    &:hover {
+      color: $blue-100;
+    }
+  }
+}
+
+// Screen reader only class
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

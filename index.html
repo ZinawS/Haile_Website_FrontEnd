@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Life Design: Explore the interconnected framework of human existence through innovative life design principles."
+    />
+    <meta
+      name="keywords"
+      content="life design, human existence, personal growth, self-improvement, innovative living, lifestyle framework"
+    />
+    <meta name="author" content="Life Design Team" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Life Design - Exploring the Image of Life"
+    />
+    <meta
+      property="og:description"
+      content="Discover innovative life design principles to explore and enhance the interconnected framework of human existence."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lifedesign.com" />
+    <meta
+      property="og:image"
+      content="https://www.lifedesign.com/images/founder.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Life Design Framework Illustration"
+    />
+    <meta property="og:site_name" content="Life Design" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Life Design - Exploring the Image of Life"
+    />
+    <meta
+      name="twitter:description"
+      content="Discover innovative life design principles to explore and enhance the interconnected framework of human existence."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.lifedesign.com/images/founder.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Life Design Framework Illustration"
+    />
+    <meta name="twitter:site" content="@LifeDesignHQ" />
+    <link rel="icon" type="image/png" href="./assets/images/hero.png" />
+    <title>Life Design - Exploring the Image of Life</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="popup-overlay"></div>
+    <div id="event-popup" role="dialog" aria-labelledby="popup-title">
+      <h2 id="popup-title" class="text-2xl font-bold text-gray-800">
+        🔔 Upcoming Event Alert!
+      </h2>
+      <p class="mt-2 text-lg">"Exploring Orthodoxy in the Life of Humans"</p>
+      <p class="mt-1">🗓 Date: January 17, 2026</p>
+      <p class="mt-1">📍 Join us online & in-person</p>
+      <a
+        href="https://example.com/register"
+        class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        aria-label="Register for the event"
+        >👉 Register Now</a
+      >
+      <button
+        id="close-popup"
+        class="mt-4 text-gray-600 underline"
+        aria-label="Close pop-up"
+      >
+        Close
+      </button>
+    </div>
+    <div id="popup-overlay"></div>
+    <div id="video-modal" class="video-modal" style="display: none">
+      <div class="video-modal-content">
+        <span id="video-modal-close" class="video-modal-close">×</span>
+        <div id="video-modal-player"></div>
+      </div>
+    </div>
+    <header>
+      <div class="header-container">
+        <a href="#image-of-life" class="logo" aria-label="Life Design Home">
+          <span class="logo-icon">🌱</span>
+          <span>Life Design</span>
+        </a>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-mobile">
+          <ul class="Nav-list">
+            <li><a href="#image-of-life">Image of Life</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#help">What We Can Help You</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>
+            Discover the Image of Life
+            <span class="waving"
+              ><img src="assets/images/hero.png" alt="Life Design Hero Image"
+            /></span>
+          </h1>
+          <p>
+            Exploring the interconnected branches of human existence, from
+            maintaining life to engineering its future
+          </p>
+          <a href="#image-of-life" class="cta-button">Explore Now</a>
+        </div>
+      </section>
+      <div class="container">
+        <section id="image-of-life" class="tree-section">
+          <div class="aim-section">
+            <h2>The Aim of Life Design</h2>
+            <div class="aim-content collapsed" id="aimContent">
+              <p>
+                <strong>Life Design</strong> is dedicated to promoting the
+                holistic success and well-being of human life in all its
+                dimensions. Its core mission is to explore and nurture the full
+                spectrum of human experience—spiritual, emotional, physical,
+                psychological, and social—helping individuals and communities
+                align their lives with truth, purpose, and natural harmony. This
+                work includes caring for the Earth, honoring the beauty of
+                creation, and engaging in the healing and restoration of what
+                has been broken. Through this integrated approach, Life Design
+                offers insight, guidance, and inspiration for living a balanced,
+                meaningful, and flourishing life. This website serves as one of
+                the key platforms of the Life Design organization, providing
+                access to its teachings, tools, and resources for individuals
+                seeking growth, transformation, and alignment with life’s deeper
+                values.
+              </p>
+              <p>
+                ላይፍ ዲዛይን የሰውን ልጅ በሁሉም ገጽታው ሁለንተናዊ ስኬትንና ደህንነትን ለማሳደግ ቁርጠኛ ነው።
+                ዋነኛው ተልዕኮው መንፈሳዊ፣ ስሜታዊ፣ አካላዊ፣ ሥነ ልቦናዊ እና ማህበራዊ - የሰውን ልጅ ሙሉ ልምድ
+                መመርመር እና ማዳበር፣ ግለሰቦችና ማህበረሰቦች ህይወታቸውን ከእውነት፣ ከዓላማ እና ከተፈጥሮአዊ
+                ስምምነት ጋር እንዲያስተካክሉ መርዳት ነው። ይህ ስራ ምድርን መንከባከብን፣ የፍጥረትን ውበት ማክበርን
+                እና የተበላሸውን ሁሉ በመፈወስና በማደስ ላይ መሳተፍን ያካትታል። ላይፍ ዲዛይን በዚህ የተቀናጀ
+                አካሄድ ሚዛናዊ፣ ትርጉም ያለው እና የበለጸገ ህይወት ለመኖር ግንዛቤን፣ መመሪያን እና መነሳሳትን
+                ይሰጣል። ይህ ድረ-ገጽ የላይፍ ዲዛይን ድርጅት ዋና መድረኮች አንዱ ሲሆን እድገትን፣ ለውጥን እና
+                ከህይወት ጥልቅ እሴቶች ጋር መጣጣምን ለሚፈልጉ ግለሰቦች ትምህርቶቹን፣ መሳሪያዎቹን እና ግብዓቶቹን
+                ያቀርባል።
+              </p>
+            </div>
+            <button class="read-more-btn" id="toggleBtn">Read More</button>
+          </div>
+
+          <h2>The Image of Life</h2>
+          <p>
+            Our comprehensive framework for understanding life in all its
+            dimensions
+          </p>
+          <input
+            type="text"
+            id="tree-search"
+            placeholder="Search branches..."
+            aria-label="Search branches"
+          />
+          <div
+            id="tree-container"
+            role="region"
+            aria-label="Image of Life Framework"
+          ></div>
+          <button id="toggle-all">Expand All</button>
+        </section>
+        <section id="founder" class="founder-section">
+          <h2>About the Founder</h2>
+          <p class="subtitle">Meet the Mind Behind Life Design</p>
+          <div class="founder-content">
+            <div class="founder-image">
+              <img
+                src="assets/images/founder.png"
+                alt="Portrait of Life Design Founder"
+                loading="lazy"
+              />
+              <div class="founder-badges">
+                <div class="badge engineering" tabindex="0">
+                  <i class="fas fa-microchip"></i>
+                  <span>Electrical Engineer</span>
+                </div>
+                <div class="badge theology" tabindex="0">
+                  <i class="fas fa-hands-praying"></i>
+                  <span>Theologian</span>
+                </div>
+                <div class="badge aviation" tabindex="0">
+                  <i class="fas fa-plane"></i>
+                  <span>Aviation Expert</span>
+                </div>
+              </div>
+            </div>
+            <div class="founder-bio">
+              <p>
+                The founder of Life Design brings a unique blend of expertise in
+                Electrical Engineering, Theology, and Aviation. This
+                interdisciplinary background fuels a passion for designing
+                systems that enhance human life.
+              </p>
+              <p>
+                By integrating spiritual wisdom, technical precision, and
+                practical experience, they aim to create frameworks that promote
+                balance, recovery, and innovation in human existence.
+              </p>
+              <div class="vision-box">
+                <div class="quote-icon">"</div>
+                <p class="vision-statement">
+                  Life is the ultimate system – and every system can be
+                  designed, optimized, and recovered.
+                </p>
+              </div>
+              <p>
+                Their mission is to rebuild hope, maintain balance, and inspire
+                new possibilities through the intersection of engineering,
+                theology, and human-centered design.
+              </p>
+              <p class="closing-statement">
+                Life Design is the platform where this vision comes to life.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="media" class="media-section">
+          <h2>Media Resources</h2>
+          <p class="section-subtitle">
+            Explore our content to deepen your understanding of life design and
+            Orthodoxy
+          </p>
+          <div class="media-select-wrapper">
+            <label for="media-select" class="sr-only">Select Media Type</label>
+            <select
+              id="media-select"
+              aria-label="Select Media Type"
+              class="media-select"
+            >
+              <option value="youtube" selected>YouTube</option>
+              <option value="tiktok">TikTok</option>
+              <option value="podcasts">Podcasts</option>
+              <option value="lectures">Lectures</option>
+            </select>
+          </div>
+          <div class="media-content">
+            <div
+              id="media-grid"
+              class="video-grid"
+              role="region"
+              aria-live="polite"
+            ></div>
+          </div>
+        </section>
+        <section id="help" class="help-section">
+          <h2>What Can We Help You?</h2>
+          <h3>ምን እንርዳዎት?</h3>
+          <p>Discover how our framework can transform your approach to life</p>
+          <div class="help-option">
+            <i class="fas fa-envelope"></i>
+            <h3>Contact Us</h3>
+            <p>Reach out with your questions or feedback!</p>
+            <form id="contact-form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                aria-label="Your Name"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                aria-label="Your Email"
+              />
+              <select
+                name="subject"
+                id="subject-select"
+                required
+                aria-label="Select a topic"
+              >
+                <option value="" disabled selected>Select a topic</option>
+                <option value="adult-life">Adult life design</option>
+                <option value="children-life">Children life design</option>
+                <option value="scholarship">Scholarship information</option>
+                <option value="spiritual">Spiritual</option>
+                <option value="other">Others</option>
+              </select>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="4"
+                required
+                aria-label="Your Message"
+              ></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+            <div id="children-registration" style="display: none">
+              <h3>Children Life Design Registration</h3>
+              <form id="children-form">
+                <div class="form-group">
+                  <label for="child-name"
+                    >Child's Name (First Name, Last Name Father)</label
+                  >
+                  <input
+                    type="text"
+                    id="child-name"
+                    name="child_name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="father-name">Father's First Name</label>
+                  <input
+                    type="text"
+                    id="father-name"
+                    name="father_name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="mother-name">Mother's Full Name</label>
+                  <input
+                    type="text"
+                    id="mother-name"
+                    name="mother_name"
+                    required
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="country">Country</label>
+                    <select
+                      id="country"
+                      name="country"
+                      class="searchable-select"
+                      required
+                    >
+                      <option value="">Select Country</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="class_date">Class Date</label>
+                    <input
+                      type="date"
+                      id="class_date"
+                      name="class_date"
+                      min=""
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group" id="state-group" style="display: none">
+                  <label for="state">State (USA only)</label>
+                  <select id="state" name="state" class="searchable-select">
+                    <option value="">Select State</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="time_slot">Time Slot</label>
+                    <select id="time_slot" name="time_slot" required>
+                      <option value="">Select Time Slot</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="start_time_utc">Equivalent UTC Time</label>
+                    <input
+                      type="text"
+                      id="start_time_utc"
+                      readonly
+                      class="readonly-input"
+                      placeholder="Will update automatically"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="church">Name of Your Church</label>
+                  <input type="text" id="church" name="church" />
+                </div>
+                <div class="form-footer">
+                  <p>
+                    <em
+                      >This service is provided free of charge. However, we
+                      kindly request your contribution to help us continue this
+                      work.</em
+                    >
+                  </p>
+                  <button id="donate-button2">Donate Now</button>
+                </div>
+                <div class="form-buttons">
+                  <button type="submit">Submit Registration</button>
+                  <button
+                    id="cancel-registration"
+                    type="button"
+                    class="cancel-button"
+                  >
+                    Cancel Registration
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="cta-banner" aria-labelledby="cta-title">
+          <h2 id="cta-title" class="text-2xl font-bold">
+            🙌 Like what you see?
+          </h2>
+          <p class="mt-2">
+            👉 Subscribe to our YouTube channel for powerful insights on life.
+          </p>
+          <p class="mt-2">
+            🔗
+            <a
+              href="https://www.youtube.com/@melkahiwot"
+              aria-label="Subscribe to our YouTube channel"
+              target="_blank"
+              >@melkahiwot on YouTube</a
+            >
+            <!-- |
+            <a
+              href="https://www.tiktok.com/@melkahiwot"
+              aria-label="Follow us on TikTok"
+              target="_blank">TikTok</a
+            > -->
+          </p>
+        </section>
+      </div>
+      <button id="donate-button">Donate Now</button>
+      <div class="donation-container" id="donation-form">
+        <div
+          id="donation-form-header"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <button id="close-form">
+            <i class="fas fa-times"></i>
+          </button>
+          <i
+            class="fas fa-arrows-alt"
+            style="font-size: 1.2rem; color: white"
+          ></i>
+        </div>
+        <div class="donation-header">
+          <h3>Make a Contribution</h3>
+          <p>Help us continue our important work</p>
+        </div>
+        <input type="text" id="user-name" placeholder="Name" />
+        <input type="email" id="user-email" placeholder="Email" required />
+        <input
+          type="number"
+          id="payment-amount"
+          placeholder="Amount (USD)"
+          value=""
+          min="1"
+        />
+        <button id="pay-button">Complete Payment</button>
+      </div>
+      <div id="notificationModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <span id="modalCloseBtn" class="close">×</span>
+          <p id="modalMessage">Test modal message</p>
+        </div>
+      </div>
+    </main>
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Life Design</h3>
+          <p>
+            Exploring the interconnected dimensions of human existence through
+            innovative frameworks and practical applications.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.tiktok.com/@melkahiwot"
+              aria-label="TikTok"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/share/1BunYLfTxp/?mibextid=qi2Omg"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://x.com/NewiSewi91745"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/hailemariam_bishaw?utm_source=qr&igsh=YW9rb25xZHB3emMw"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/hailemariam-bishaw-fetene-558a6a17b/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#image-of-life">Image of Life</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#help">What We Can Help You</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> Houseos831@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        © <span id="current-year">2025</span> Life Design. All rights reserved.
+      </div>
+    </footer>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
+    <script src="./assets/js/config.js" async></script>
+    <script src="./assets/js/modules/api.js" type="module"></script>
+    <script src="./assets/js/modules/showModal.js" type="module"></script>
+    <script src="./assets/js/modules/email.js" type="module"></script>
+    <script src="./assets/js/modules/children.js" type="module"></script>
+    <script src="./assets/js/modules/forms.js" type="module"></script>
+    <script src="./assets/js/modules/tree.js" type="module"></script>
+    <script src="./assets/js/modules/payment.js" type="module"></script>
+    <script src="./assets/js/modules/navigation.js" type="module"></script>
+    <script src="./assets/js/modules/video.js" type="module"></script>
+    <script src="./assets/js/modules/dragging.js" type="module"></script>
+    <script src="./assets/js/modules/buttonControl.js" type="module"></script>
+    <script src="./assets/js/modules/eventAlert.js" type="module"></script>
+
+    <script src="./assets/js/modules/media-select.js" type="module"></script>
+  </body>
+</html>
