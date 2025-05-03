@@ -462,13 +462,14 @@ footer .copyright {
   position: fixed;
   top: 25%;
   left: 82%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, 0%);
   z-index: 1000;
   background: #ffffff;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   max-width: 400px;
+  min-width: 200px;
   text-align: center;
   border: 1px solid #1e40af;
   animation: fadeIn 0.5s ease-in;
