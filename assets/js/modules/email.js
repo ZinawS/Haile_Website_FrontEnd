@@ -137,7 +137,7 @@ async function handleFormSubmit(event, form) {
     await submitContactForm(formData);
 
     // Show success and reset form
-    showModal("Your message has been sent successfully!", "success");
+    showModal("Thank you for reaching out!  Your message is important to us. Please allow a few days for a response while we prepare personalized support for you.", "success");
     form.reset();
 
     // Log conversion (analytics)

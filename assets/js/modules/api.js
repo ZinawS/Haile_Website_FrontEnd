@@ -1,15 +1,13 @@
-/**
- * API Service Module - Handles all API communications
- *
- * Features:
- * - Configurable base URL with environment awareness
- * - Automatic retry for failed requests
- * - Request timeout handling
- * - Consistent error handling
- * - AbortController support for request cancellation
- */
+/* ==========================================================================
+   API Service Module
+   Handles all API communications with configurable base URL, retry logic, 
+   timeout handling, and consistent error management.
+   ========================================================================== */
 
-// Configuration
+/* ==========================================================================
+   Configuration
+   Defines the base URL, timeout, retry settings, and other API constants.
+   ========================================================================== */
 const API_CONFIG = {
   baseUrl: window.config?.API_BASE_URL || "http://localhost:3000",
   defaultTimeout: 8000, // 8 seconds
@@ -17,6 +15,10 @@ const API_CONFIG = {
   retryDelay: 1000, // 1 second
 };
 
+/* ==========================================================================
+   Core Request Handler
+   Makes API requests with retry logic, timeout, and AbortController support.
+   ========================================================================== */
 /**
  * Makes an API request with enhanced error handling and retry logic
  * @param {string} endpoint - API endpoint path
@@ -84,6 +86,10 @@ async function _makeRequest(
   throw lastError;
 }
 
+/* ==========================================================================
+   Error Response Parser
+   Parses error responses from the API for consistent error handling.
+   ========================================================================== */
 /**
  * Parses error response from API
  * @param {Response} response - Fetch response object
@@ -97,6 +103,10 @@ async function _parseErrorResponse(response) {
   }
 }
 
+/* ==========================================================================
+   Custom Error Class
+   Defines a custom ApiError class for structured API error handling.
+   ========================================================================== */
 /**
  * Custom API Error class
  */
@@ -109,10 +119,11 @@ class ApiError extends Error {
   }
 }
 
-// ======================
-// Public API Methods
-// ======================
-
+/* ==========================================================================
+   Public API Methods
+   Provides methods for submitting forms, registering children, creating payment 
+   intents, and checking API health.
+   ========================================================================== */
 /**
  * Submits contact form data
  * @param {object} formData - Contact form data

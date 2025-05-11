@@ -12,13 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.2",
+    "live-server": "^1.2.0",
     "sass": "^1.87.0"
   },
   "dependencies": {
     "braces": "^3.0.3",
     "chokidar": "^4.0.3",
+    "compromise": "^14.14.4",
     "detect-libc": "^1.0.3",
+    "dompurify": "^3.2.5",
     "fill-range": "^7.1.1",
     "immutable": "^5.1.1",
     "is-extglob": "^2.1.1",
@@ -27,9 +29,19 @@
     "micromatch": "^4.0.8",
     "node-addon-api": "^7.1.1",
     "picomatch": "^2.3.1",
+    "quill": "^2.0.3",
     "readdirp": "^4.1.2",
     "source-map-js": "^1.2.1",
-    "to-regex-range": "^5.0.1"
+    "to-regex-range": "^5.0.1",
+    "type-js": "^1.0.0"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZinawS/Haile_Website_FrontEnd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZinawS/Haile_Website_FrontEnd/issues"
+  },
+  "homepage": "https://github.com/ZinawS/Haile_Website_FrontEnd#readme"
 }

@@ -1,0 +1,644 @@
+[
+  {
+    "category": "alphabet",
+    "groupName": "H Family",
+    "fidels": ["ሀ", "ሁ", "ሂ", "ሃ", "ሄ", "ህ", "ሆ"],
+    "pronunciations": ["ha", "hu", "hi", "haa", "he", "h", "ho"],
+    "audio": [
+      "h1.mp3",
+      "h2.mp3",
+      "h3.mp3",
+      "h4.mp3",
+      "h5.mp3",
+      "h6.mp3",
+      "h7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "L Family",
+    "fidels": ["ለ", "ሉ", "ሊ", "ላ", "ሌ", "ል", "ሎ"],
+    "pronunciations": ["la", "lu", "li", "laa", "le", "l", "lo"],
+    "audio": [
+      "l1.mp3",
+      "l2.mp3",
+      "l3.mp3",
+      "l4.mp3",
+      "l5.mp3",
+      "l6.mp3",
+      "l7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "H (Hut) Family",
+    "fidels": ["ሐ", "ሑ", "ሒ", "ሓ", "ሔ", "ሕ", "ሖ"],
+    "pronunciations": ["ha", "hu", "hi", "haa", "he", "h", "ho"],
+    "audio": [
+      "hh1.mp3",
+      "hh2.mp3",
+      "hh3.mp3",
+      "hh4.mp3",
+      "hh5.mp3",
+      "hh6.mp3",
+      "hh7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "M Family",
+    "fidels": ["መ", "ሙ", "ሚ", "ማ", "ሜ", "ም", "ሞ"],
+    "pronunciations": ["ma", "mu", "mi", "maa", "me", "m", "mo"],
+    "audio": [
+      "m1.mp3",
+      "m2.mp3",
+      "m3.mp3",
+      "m4.mp3",
+      "m5.mp3",
+      "m6.mp3",
+      "m7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "S (Sawt) Family",
+    "fidels": ["ሠ", "ሡ", "ሢ", "ሣ", "ሤ", "ሥ", "ሦ"],
+    "pronunciations": ["sa", "su", "si", "saa", "se", "s", "so"],
+    "audio": [
+      "saw1.mp3",
+      "saw2.mp3",
+      "saw3.mp3",
+      "saw4.mp3",
+      "saw5.mp3",
+      "saw6.mp3",
+      "saw7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "R Family",
+    "fidels": ["ረ", "ሩ", "ሪ", "ራ", "ሬ", "ር", "ሮ"],
+    "pronunciations": ["ra", "ru", "ri", "raa", "re", "r", "ro"],
+    "audio": [
+      "r1.mp3",
+      "r2.mp3",
+      "r3.mp3",
+      "r4.mp3",
+      "r5.mp3",
+      "r6.mp3",
+      "r7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "S Family",
+    "fidels": ["ሰ", "ሱ", "ሲ", "ሳ", "ሴ", "ስ", "ሶ"],
+    "pronunciations": ["sa", "su", "si", "saa", "se", "s", "so"],
+    "audio": [
+      "s1.mp3",
+      "s2.mp3",
+      "s3.mp3",
+      "s4.mp3",
+      "s5.mp3",
+      "s6.mp3",
+      "s7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "SH Family",
+    "fidels": ["ሸ", "ሹ", "ሺ", "ሻ", "ሼ", "ሽ", "ሾ"],
+    "pronunciations": ["sha", "shu", "shi", "shaa", "she", "sh", "sho"],
+    "audio": [
+      "sh1.mp3",
+      "sh2.mp3",
+      "sh3.mp3",
+      "sh4.mp3",
+      "sh5.mp3",
+      "sh6.mp3",
+      "sh7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "Q Family",
+    "fidels": ["ቀ", "ቁ", "ቂ", "ቃ", "ቄ", "ቅ", "ቆ"],
+    "pronunciations": ["ka", "ku", "ki", "kaa", "ke", "k", "ko"],
+    "audio": [
+      "q1.mp3",
+      "q2.mp3",
+      "q3.mp3",
+      "q4.mp3",
+      "q5.mp3",
+      "q6.mp3",
+      "q7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "B Family",
+    "fidels": ["በ", "ቡ", "ቢ", "ባ", "ቤ", "ብ", "ቦ"],
+    "pronunciations": ["ba", "bu", "bi", "baa", "be", "b", "bo"],
+    "audio": [
+      "b1.mp3",
+      "b2.mp3",
+      "b3.mp3",
+      "b4.mp3",
+      "b5.mp3",
+      "b6.mp3",
+      "b7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "V Family",
+    "fidels": ["ቨ", "ቩ", "ቪ", "ቫ", "ቬ", "ቭ", "ቮ"],
+    "pronunciations": ["va", "vu", "vi", "vaa", "ve", "v", "vo"],
+    "audio": [
+      "v1.mp3",
+      "v2.mp3",
+      "v3.mp3",
+      "v4.mp3",
+      "v5.mp3",
+      "v6.mp3",
+      "v7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "T Family",
+    "fidels": ["ተ", "ቱ", "ቲ", "ታ", "ቴ", "ት", "ቶ"],
+    "pronunciations": ["ta", "tu", "ti", "taa", "te", "t", "to"],
+    "audio": [
+      "t1.mp3",
+      "t2.mp3",
+      "t3.mp3",
+      "t4.mp3",
+      "t5.mp3",
+      "t6.mp3",
+      "t7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "CH Family",
+    "fidels": ["ቸ", "ቹ", "ቺ", "ቻ", "ቼ", "ች", "ቾ"],
+    "pronunciations": ["cha", "chu", "chi", "chaa", "che", "ch", "cho"],
+    "audio": [
+      "ch1.mp3",
+      "ch2.mp3",
+      "ch3.mp3",
+      "ch4.mp3",
+      "ch5.mp3",
+      "ch6.mp3",
+      "ch7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "KH Family",
+    "fidels": ["ኀ", "ኁ", "ኂ", "ኃ", "ኄ", "ኅ", "ኆ"],
+    "pronunciations": ["kha", "khu", "khi", "khaa", "khe", "kh", "kho"],
+    "audio": [
+      "kh1.mp3",
+      "kh2.mp3",
+      "kh3.mp3",
+      "kh4.mp3",
+      "kh5.mp3",
+      "kh6.mp3",
+      "kh7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "N Family",
+    "fidels": ["ነ", "ኑ", "ኒ", "ና", "ኔ", "ን", "ኖ"],
+    "pronunciations": ["na", "nu", "ni", "naa", "ne", "n", "no"],
+    "audio": [
+      "n1.mp3",
+      "n2.mp3",
+      "n3.mp3",
+      "n4.mp3",
+      "n5.mp3",
+      "n6.mp3",
+      "n7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "NY Family",
+    "fidels": ["ኘ", "ኙ", "ኚ", "ኛ", "ኜ", "ኝ", "ኞ"],
+    "pronunciations": ["nya", "nyu", "nyi", "nyaa", "nye", "ny", "nyo"],
+    "audio": [
+      "ny1.mp3",
+      "ny2.mp3",
+      "ny3.mp3",
+      "ny4.mp3",
+      "ny5.mp3",
+      "ny6.mp3",
+      "ny7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "A Family",
+    "fidels": ["አ", "ኡ", "ኢ", "ኣ", "ኤ", "እ", "ኦ"],
+    "pronunciations": ["a", "u", "i", "aa", "e", "", "o"],
+    "audio": [
+      "a1.mp3",
+      "a2.mp3",
+      "a3.mp3",
+      "a4.mp3",
+      "a5.mp3",
+      "silent.mp3",
+      "a7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "K Family",
+    "fidels": ["ከ", "ኩ", "ኪ", "ካ", "ኬ", "ክ", "ኮ"],
+    "pronunciations": ["ka", "ku", "ki", "kaa", "ke", "k", "ko"],
+    "audio": [
+      "k1.mp3",
+      "k2.mp3",
+      "k3.mp3",
+      "k4.mp3",
+      "k5.mp3",
+      "k6.mp3",
+      "k7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "KH (Alternate) Family",
+    "fidels": ["ኸ", "ኹ", "ኺ", "ኻ", "ኼ", "ኽ", "ኾ"],
+    "pronunciations": ["kha", "khu", "khi", "khaa", "khe", "kh", "kho"],
+    "audio": [
+      "kh-alt1.mp3",
+      "kh-alt2.mp3",
+      "kh-alt3.mp3",
+      "kh-alt4.mp3",
+      "kh-alt5.mp3",
+      "kh-alt6.mp3",
+      "kh-alt7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "W Family",
+    "fidels": ["ወ", "ዉ", "ዊ", "ዋ", "ዌ", "ው", "ዎ"],
+    "pronunciations": ["wa", "wu", "wi", "waa", "we", "w", "wo"],
+    "audio": [
+      "w1.mp3",
+      "w2.mp3",
+      "w3.mp3",
+      "w4.mp3",
+      "w5.mp3",
+      "w6.mp3",
+      "w7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "A (Ayin) Family",
+    "fidels": ["ዐ", "ዑ", "ዒ", "ዓ", "ዔ", "ዕ", "ዖ"],
+    "pronunciations": ["a", "u", "i", "aa", "e", "", "o"],
+    "audio": [
+      "ayin1.mp3",
+      "ayin2.mp3",
+      "ayin3.mp3",
+      "ayin4.mp3",
+      "ayin5.mp3",
+      "silent2.mp3",
+      "ayin7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "Z Family",
+    "fidels": ["ዘ", "ዙ", "ዚ", "ዛ", "ዜ", "ዝ", "ዞ"],
+    "pronunciations": ["za", "zu", "zi", "zaa", "ze", "z", "zo"],
+    "audio": [
+      "z1.mp3",
+      "z2.mp3",
+      "z3.mp3",
+      "z4.mp3",
+      "z5.mp3",
+      "z6.mp3",
+      "z7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "ZH Family",
+    "fidels": ["ዠ", "ዡ", "ዢ", "ዣ", "ዤ", "ዥ", "ዦ"],
+    "pronunciations": ["zha", "zhu", "zhi", "zhaa", "zhe", "zh", "zho"],
+    "audio": [
+      "zh1.mp3",
+      "zh2.mp3",
+      "zh3.mp3",
+      "zh4.mp3",
+      "zh5.mp3",
+      "zh6.mp3",
+      "zh7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "Y Family",
+    "fidels": ["የ", "ዩ", "ዪ", "ያ", "ዬ", "ይ", "ዮ"],
+    "pronunciations": ["ya", "yu", "yi", "yaa", "ye", "y", "yo"],
+    "audio": [
+      "y1.mp3",
+      "y2.mp3",
+      "y3.mp3",
+      "y4.mp3",
+      "y5.mp3",
+      "y6.mp3",
+      "y7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "D Family",
+    "fidels": ["ደ", "ዱ", "ዲ", "ዳ", "ዴ", "ድ", "ዶ"],
+    "pronunciations": ["da", "du", "di", "daa", "de", "d", "do"],
+    "audio": [
+      "d1.mp3",
+      "d2.mp3",
+      "d3.mp3",
+      "d4.mp3",
+      "d5.mp3",
+      "d6.mp3",
+      "d7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "J Family",
+    "fidels": ["ጀ", "ጁ", "ጂ", "ጃ", "ጄ", "ጅ", "ጆ"],
+    "pronunciations": ["ja", "ju", "ji", "jaa", "je", "j", "jo"],
+    "audio": [
+      "j1.mp3",
+      "j2.mp3",
+      "j3.mp3",
+      "j4.mp3",
+      "j5.mp3",
+      "j6.mp3",
+      "j7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "G Family",
+    "fidels": ["ገ", "ጉ", "ጊ", "ጋ", "ጌ", "ግ", "ጎ"],
+    "pronunciations": ["ga", "gu", "gi", "gaa", "ge", "g", "go"],
+    "audio": [
+      "g1.mp3",
+      "g2.mp3",
+      "g3.mp3",
+      "g4.mp3",
+      "g5.mp3",
+      "g6.mp3",
+      "g7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "TS Family",
+    "fidels": ["ጸ", "ጹ", "ጺ", "ጻ", "ጼ", "ጽ", "ጾ"],
+    "pronunciations": ["tsa", "tsu", "tsi", "tsaa", "tse", "ts", "tso"],
+    "audio": [
+      "ts1.mp3",
+      "ts2.mp3",
+      "ts3.mp3",
+      "ts4.mp3",
+      "ts5.mp3",
+      "ts6.mp3",
+      "ts7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "T (Strong) Family",
+    "fidels": ["ጠ", "ጡ", "ጢ", "ጣ", "ጤ", "ጥ", "ጦ"],
+    "pronunciations": ["ta", "tu", "ti", "taa", "te", "t", "to"],
+    "audio": [
+      "tt1.mp3",
+      "tt2.mp3",
+      "tt3.mp3",
+      "tt4.mp3",
+      "tt5.mp3",
+      "tt6.mp3",
+      "tt7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "CH (Strong) Family",
+    "fidels": ["ጨ", "ጩ", "ጪ", "ጫ", "ጬ", "ጭ", "ጮ"],
+    "pronunciations": ["cha", "chu", "chi", "chaa", "che", "ch", "cho"],
+    "audio": [
+      "cch1.mp3",
+      "cch2.mp3",
+      "cch3.mp3",
+      "cch4.mp3",
+      "cch5.mp3",
+      "cch6.mp3",
+      "cch7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "P Family",
+    "fidels": ["ጰ", "ጱ", "ጲ", "ጳ", "ጴ", "ጵ", "ጶ"],
+    "pronunciations": ["pa", "pu", "pi", "paa", "pe", "p", "po"],
+    "audio": [
+      "p1.mp3",
+      "p2.mp3",
+      "p3.mp3",
+      "p4.mp3",
+      "p5.mp3",
+      "p6.mp3",
+      "p7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "TS (Alternate) Family",
+    "fidels": ["ፀ", "ፁ", "ፂ", "ፃ", "ፄ", "ፅ", "ፆ"],
+    "pronunciations": ["tsa", "tsu", "tsi", "tsaa", "tse", "ts", "tso"],
+    "audio": [
+      "ts-alt1.mp3",
+      "ts-alt2.mp3",
+      "ts-alt3.mp3",
+      "ts-alt4.mp3",
+      "ts-alt5.mp3",
+      "ts-alt6.mp3",
+      "ts-alt7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "F Family",
+    "fidels": ["ፈ", "ፉ", "ፊ", "ፋ", "ፌ", "ፍ", "ፎ"],
+    "pronunciations": ["fa", "fu", "fi", "faa", "fe", "f", "fo"],
+    "audio": [
+      "f1.mp3",
+      "f2.mp3",
+      "f3.mp3",
+      "f4.mp3",
+      "f5.mp3",
+      "f6.mp3",
+      "f7.mp3"
+    ]
+  },
+  {
+    "category": "alphabet",
+    "groupName": "P (Alternate) Family",
+    "fidels": ["ፐ", "ፑ", "ፒ", "ፓ", "ፔ", "ፕ", "ፖ"],
+    "pronunciations": ["pa", "pu", "pi", "paa", "pe", "p", "po"],
+    "audio": [
+      "p-alt1.mp3",
+      "p-alt2.mp3",
+      "p-alt3.mp3",
+      "p-alt4.mp3",
+      "p-alt5.mp3",
+      "p-alt6.mp3",
+      "p-alt7.mp3"
+    ]
+  },
+
+  {
+    "category": "alphabet",
+    "groupName": "Special Combinations",
+    "fidels": [
+      "ኈ",
+      "ኊ",
+      "ኋ",
+      "ኌ",
+      "ኍ",
+      "ዅ",
+      "ዀ",
+      "ዂ",
+      "ዃ",
+      "ዅ",
+      "ጎ",
+      "ጐ",
+      "ጒ",
+      "ጓ",
+      "ጔ",
+      "ጕ"
+    ],
+    "pronunciations": [
+      "kwa",
+      "kwi",
+      "kwaa",
+      "kwe",
+      "kw",
+      "hwa",
+      "hwi",
+      "hwaa",
+      "hwe",
+      "hw",
+      "gwa",
+      "gwi",
+      "gwaa",
+      "gwe",
+      "gw"
+    ],
+    "audio": [
+      "kwa1.mp3",
+      "kwa2.mp3",
+      "kwa3.mp3",
+      "kwa4.mp3",
+      "kwa5.mp3",
+      "hwa1.mp3",
+      "hwa2.mp3",
+      "hwa3.mp3",
+      "hwa4.mp3",
+      "hwa5.mp3",
+      "gwa1.mp3",
+      "gwa2.mp3",
+      "gwa3.mp3",
+      "gwa4.mp3",
+      "gwa5.mp3"
+    ]
+  },
+
+  {
+    "category": "numbers",
+    "groupName": "Units (1-9)",
+    "fidels": ["፩", "፪", "፫", "፬", "፭", "፮", "፯", "፰", "፱"],
+    "pronunciations": [
+      "and(1)",
+      "hulet(2)",
+      "sost(3)",
+      "arat(4)",
+      "amist(5)",
+      "sidist(6)",
+      "sebat(7)",
+      "simint(8)",
+      "zetegn(9)"
+    ],
+    "audio": [
+      "1.mp3",
+      "2.mp3",
+      "3.mp3",
+      "4.mp3",
+      "5.mp3",
+      "6.mp3",
+      "7.mp3",
+      "8.mp3",
+      "9.mp3"
+    ]
+  },
+  {
+    "category": "numbers",
+    "groupName": "Tens (10-90)",
+    "fidels": ["፲", "፳", "፴", "፵", "፶", "፷", "፸", "፹", "፺"],
+    "pronunciations": [
+      "asir(10)",
+      "haya(20)",
+      "selasa(30)",
+      "arba(40)",
+      "hamsa(50)",
+      "silsa(60)",
+      "seba(70)",
+      "semanya(80)",
+      "zetena(90)"
+    ],
+    "audio": [
+      "10.mp3",
+      "20.mp3",
+      "30.mp3",
+      "40.mp3",
+      "50.mp3",
+      "60.mp3",
+      "70.mp3",
+      "80.mp3",
+      "90.mp3"
+    ]
+  },
+  {
+    "category": "numbers",
+    "groupName": "Hundreds/Thousands",
+    "fidels": ["፻", "፲፻", "፼"],
+    "pronunciations": ["meto(100)", "and shih(1000)", "asir shih(10,000)"],
+    "audio": ["100.mp3", "1000.mp3", "10000.mp3"]
+  },
+  {
+    "category": "numbers",
+    "groupName": "Example Combinations",
+    "fidels": ["፩፻፩", "፪፻፴፭", "፲፻፱፻፺፱", "፮፻፶፮", "፰፻፹፰"],
+    "pronunciations": [
+      "and meto and (101)",
+      "hulet meto selasa amist (235)",
+      "and shih zetegn meto zetena zetegn (1999)",
+      "sidist meto hamsa sidist (656)",
+      "simint meto semanya simint (888)"
+    ],
+    "audio": ["101.mp3", "235.mp3", "1999.mp3", "656.mp3", "888.mp3"]
+  }
+]
