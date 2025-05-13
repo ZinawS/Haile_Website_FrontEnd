@@ -1,9 +1,10 @@
-/** * Enhanced Alert Banner System with Close Button and Animation */ document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    loadAlertBanner();
-  }
-);
+/**
+ * Enhanced Alert Banner System with Close Button and Animation
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  loadAlertBanner();
+});
+
 async function loadAlertBanner() {
   try {
     const response = await fetch("./assets/js/modules/alertData.json");
@@ -24,29 +25,58 @@ async function loadAlertBanner() {
         margin: "10px auto",
         maxWidth: "90%",
       });
+    } else {
+      // Ensure container is hidden if conditions are not met
+      const container = document.getElementById("global-alert-container");
+      if (container) container.style.display = "none";
     }
   } catch (error) {
     console.error("Alert system error:", error.message);
+    // Hide container on error
+    const container = document.getElementById("global-alert-container");
+    if (container) container.style.display = "none";
   }
 }
+
 function showAlertBanner(message, styleOptions = {}) {
   const container =
     document.getElementById("global-alert-container") || createAlertContainer();
+  container.style.display = "block"; // Show container
   container.innerHTML = "";
   const banner = document.createElement("div");
   banner.className = "alert-banner";
-  banner.innerHTML = ` <div class="alert-content"> <div class="alert-icon">⚠️</div> <div class="alert-text"> <h3 class="alert-title">ALERT NOTIFICATION</h3> <p class="alert-message">${message}</p> </div> <button class="alert-close">&times;</button> </div> `;
+  banner.innerHTML = `
+    <div class="alert-content">
+      <div class="alert-icon">⚠️</div>
+      <div class="alert-text">
+        <h3 class="alert-title">ALERT NOTIFICATION</h3>
+        <p class="alert-message">${message}</p>
+      </div>
+      <button class="alert-close">×</button>
+    </div>
+  `;
   applyBannerStyles(banner, styleOptions);
   container.appendChild(banner);
   setupBannerBehavior(banner, container, styleOptions);
 }
+
 function createAlertContainer() {
   const container = document.createElement("div");
   container.id = "global-alert-container";
-  container.style.cssText = ` position: fixed; top: 0; left: 0; right: 0; z-index: 9999; width: 100%; display: flex; justify-content: center; `;
+  container.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    display: none; /* Hidden by default */
+    justify-content: center;
+  `;
   document.body.prepend(container);
   return container;
 }
+
 function applyBannerStyles(banner, options) {
   const styles = {
     backgroundColor: options.backgroundColor || "#ff4444",
@@ -67,9 +97,50 @@ function applyBannerStyles(banner, options) {
   };
   Object.assign(banner.style, styles);
   const styleSheet = document.createElement("style");
-  styleSheet.textContent = ` @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } } .alert-banner { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; } .alert-content { display: flex; align-items: center; text-align:center; width: 100%; } .alert-icon { font-size: 24px; margin-right: 15px; } .alert-text { flex: 1; } .alert-title { margin: 0 0 5px 0; font-size: 18px; letter-spacing: 0.5px; } .alert-message { margin: 0; line-height: 1.5; } .alert-close { background: transparent; border: none; color: ${options.textColor || "#ffffff"}; font-size: 24px; cursor: pointer; padding: 0 0 0 15px; opacity: 0.7; transition: opacity 0.2s; } .alert-close:hover { opacity: 1; } `;
+  styleSheet.textContent = `
+    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    .alert-banner {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+    .alert-content {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+    .alert-icon {
+      font-size: 24px;
+      margin-right: 15px;
+    }
+    .alert-text {
+      flex: 1;
+    }
+    .alert-title {
+      margin: 0 0 5px 0;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+    .alert-message {
+      margin: 0;
+      line-height: 1.5;
+    }
+    .alert-close {
+      background: transparent;
+      border: none;
+      color: ${options.textColor || "#ffffff"};
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0 0 0 15px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .alert-close:hover {
+      opacity: 1;
+    }
+  `;
   document.head.appendChild(styleSheet);
 }
+
 function setupBannerBehavior(banner, container, options) {
   let flashCount = 0;
   const maxFlashes = Math.floor(
@@ -84,8 +155,10 @@ function setupBannerBehavior(banner, container, options) {
     banner.style.animation = "none";
     banner.style.opacity = "0";
     banner.style.transform = "translateY(-20px)";
-    setTimeout(() => container.remove(), 300);
-    document.body.style.marginTop = "0";
+    setTimeout(() => {
+      container.style.display = "none"; // Hide instead of remove
+      document.body.style.marginTop = "0";
+    }, 300);
   });
   const bannerHeight = banner.offsetHeight;
   document.body.style.marginTop = `${bannerHeight}px`;
