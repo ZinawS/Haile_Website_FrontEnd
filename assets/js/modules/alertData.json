@@ -1,5 +1,12 @@
-{
-  "message": "URGENT: System maintenance scheduled for tonight at 10PM EST",
-  "isApprovedforDisplay": false,
-  "expires": "2023-12-31"
-}
+[
+  {
+    "message": "🚨 URGENT: Unauthorized drone surveillance has been detected over the Finote Selam area—immediately evacuate open spaces, seek shelter, remain off-grid, and treat all drones as potential threats.",
+    "isApprovedforDisplay": false,
+    "expires": "2025-05-12"
+  },
+  {
+    "message": "🚨 URGENT: Unauthorized drone surveillance has been detected over the Finote Selam area—immediately evacuate open spaces, seek shelter, remain off-grid, and treat all drones as potential threats.",
+    "isApprovedforDisplay": false,
+    "expires": "2025-05-12"
+  }
+]

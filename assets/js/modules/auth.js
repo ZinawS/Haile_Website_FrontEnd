@@ -72,6 +72,7 @@ class ApiService {
 
   // Handles login API call
   static async login(email, password) {
+    // console.log("useremail",email,"password",password);
     const response = await this.fetchWithRetries(
       `${API_CONFIG.baseUrl}/api/auth/login`,
       {
@@ -475,6 +476,7 @@ class AuthService {
         const email = document.getElementById("login-email")?.value;
         const password = document.getElementById("login-password")?.value;
         this.login(email, password);
+    
       },
       "register-form": (event) => {
         event.preventDefault();
