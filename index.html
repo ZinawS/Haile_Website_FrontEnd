@@ -80,6 +80,7 @@
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
+
   <!-- Head Section Ends Here -->
 
   <!-- ==========================================================================
@@ -87,6 +88,16 @@
    Contains the main content, modals, header, main sections, footer, and scripts.
    ========================================================================== -->
   <body>
+    <!-- Enhanced loader with particles and spiral background -->
+    <div class="loader-overlay" id="loaderOverlay">
+      <div class="loader-container">
+        <div class="spiral-bg"></div>
+        <div class="loader"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
     <!-- ==========================================================================
      Popups and Modals
      Defines event popup, video modal, and notification modals for user interactions.
@@ -141,7 +152,7 @@
     <!-- Header Section Ends Here -->
     <!-- Alert Display starts here -->
     <!-- <div id="global-alert-container"> -->
-      <!-- Banner will appear here -->
+    <!-- Banner will appear here -->
     <!-- </div> -->
     <!-- Alert Display ends here -->
     <!-- ==========================================================================
@@ -159,7 +170,8 @@
             /></span>
           </h1>
           <p>
-            It beautifully reflects the integration of spiritual wisdom, life appreciation, and recognition of God's creation.
+            It beautifully reflects the integration of spiritual wisdom, life
+            appreciation, and recognition of God's creation.
           </p>
           <a href="#image-of-life" class="cta-button">Explore Now</a>
         </div>
@@ -397,7 +409,9 @@
                 aria-describedby="form-instructions"
               >
                 <option value="" disabled selected>Select a topic</option>
-                <option value="adult-life">For Adults – Solve Life Problems</option>
+                <option value="adult-life">
+                  For Adults – Solve Life Problems
+                </option>
                 <option value="children-life">For Kids – Learn and Grow</option>
                 <option value="scholarship">Scholarship information</option>
                 <option value="spiritual">Faith and God</option>
@@ -405,7 +419,7 @@
                 <option value="spiritual">Purpose and Hope</option>
                 <option value="other">Others</option>
               </select>
-             
+
               <textarea
                 name="message"
                 placeholder="Your Message"
@@ -797,6 +811,17 @@
     <script type="module" src="./assets/js/modules/blog.js"></script>
     <script type="module" src="./assets/js/modules/alert.js"></script>
     <!-- Scripts Section Ends Here -->
+    <!-- Update the existing scripts section -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loaderOverlay");
+
+        // Hide loader after 2.5 seconds (simulate page load)
+        setTimeout(() => {
+          loader.classList.add("loader-hidden");
+        }, 2500);
+      });
+    </script>
   </body>
   <!-- Body Section Ends Here -->
 </html>
