@@ -1071,7 +1071,7 @@ $error-red: #f44336;
 /* Hide loader when not needed */
 .loader-hidden {
   opacity: 0;
-  visibility: visible;
+  visibility: hidden;
   transition:
     opacity 0.5s ease,
     visibility 0.5s ease;
