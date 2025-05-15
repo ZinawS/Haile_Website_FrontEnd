@@ -10,7 +10,7 @@ async function loadAlertBanner() {
     const response = await fetch("./assets/js/modules/alertData.json");
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const alertData = await response.json();
-    console.log("Alert data loaded:", alertData);
+    //console.log("Alert data loaded:", alertData);
     if (alertData.isApprovedforDisplay && alertData.message) {
       showAlertBanner(alertData.message, {
         backgroundColor: "#ff4444",
@@ -31,7 +31,7 @@ async function loadAlertBanner() {
       if (container) container.style.display = "none";
     }
   } catch (error) {
-    console.error("Alert system error:", error.message);
+    //console.error("Alert system error:", error.message);
     // Hide container on error
     const container = document.getElementById("global-alert-container");
     if (container) container.style.display = "none";

@@ -59,7 +59,7 @@ async function fetchPopupData() {
     }
     return data;
   } catch (error) {
-    console.error("Error fetching popup data:", error);
+    //console.error("Error fetching popup data:", error);
     return null;
   }
 }
@@ -74,23 +74,23 @@ function showPopup() {
   const closeButton = document.getElementById("close-popup");
 
   if (!popup || !overlay) {
-    console.error(
-      "Popup elements missing: event-popup or popup-overlay not found"
-    );
+    // //console.error(
+    // //   "Popup elements missing: event-popup or popup-overlay not found"
+    // );
     return;
   }
 
   // Fetch popup data
   fetchPopupData().then((popupData) => {
     if (!popupData) {
-      console.error("No popup data available");
+      //console.error("No popup data available");
       return;
     }
 
     // Find the first approved popup
     const approvedPopup = popupData.find((p) => p.isApproved);
     if (!approvedPopup) {
-      console.debug("No approved popups found");
+      //console.debug("No approved popups found");
       return;
     }
 
@@ -102,7 +102,7 @@ function showPopup() {
     const urlParams = new URLSearchParams(window.location.search);
     const forcePopup = urlParams.get("forcePopup") === "true";
 
-    console.debug("Popup cookie status:", cookie, "Force popup:", forcePopup);
+    //console.debug("Popup cookie status:", cookie, "Force popup:", forcePopup);
 
     if (!cookie || forcePopup) {
       // Populate popup with JSON data
@@ -135,11 +135,11 @@ function showPopup() {
 
       // Verify visibility
       const computedStyle = window.getComputedStyle(popup);
-      console.debug("Popup display:", computedStyle.display);
-      console.debug("Popup visibility:", computedStyle.visibility);
-      console.debug("Popup z-index:", computedStyle.zIndex);
-      console.debug("Popup position:", computedStyle.position);
-      console.debug("Popup displayed with data:", approvedPopup);
+      //console.debug("Popup display:", computedStyle.display);
+      //console.debug("Popup visibility:", computedStyle.visibility);
+      //console.debug("Popup z-index:", computedStyle.zIndex);
+      //console.debug("Popup position:", computedStyle.position);
+      //console.debug("Popup displayed with data:", approvedPopup);
 
       // Reattach close button listener (since button is recreated)
       const newCloseButton = document.getElementById("close-popup");
@@ -147,18 +147,18 @@ function showPopup() {
         newCloseButton.addEventListener("click", () => {
           popup.style.display = "none";
           overlay.style.display = "none";
-          console.debug("Popup closed via close button");
+          //console.debug("Popup closed via close button");
         });
       }
     } else {
-      console.debug("Popup not shown: cookie already set");
+      //console.debug("Popup not shown: cookie already set");
     }
 
     // Overlay click handler
     overlay.addEventListener("click", () => {
       popup.style.display = "none";
       overlay.style.display = "none";
-      console.debug("Popup closed via overlay click");
+      //console.debug("Popup closed via overlay click");
     });
 
     // Escape key handler
@@ -166,7 +166,7 @@ function showPopup() {
       if (event.key === "Escape" && popup.style.display === "block") {
         popup.style.display = "none";
         overlay.style.display = "none";
-        console.debug("Popup closed via Escape key");
+        //console.debug("Popup closed via Escape key");
       }
     });
   });
@@ -177,12 +177,12 @@ function showPopup() {
    Initializes popup display on DOM load and window load with cookie checks.
    ========================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
-  console.debug("DOMContentLoaded fired for popup.js");
+  //console.debug("DOMContentLoaded fired for popup.js");
   showPopup();
 });
 
 window.addEventListener("load", () => {
-  console.debug("window.onload fired for popup.js");
+  //console.debug("window.onload fired for popup.js");
   if (
     !getCookie(POPUP_CONFIG.cookieName) ||
     new URLSearchParams(window.location.search).get("forcePopup") === "true"

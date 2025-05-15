@@ -39,14 +39,14 @@ let cancelBlogBtn = document.getElementById("cancel-blog");
 let quillEditor = null;
 const dictionary = new Typo("en_US");
 
-console.log("Initial DOM elements:", {
-  blogGrid,
-  createBlogBtn,
-  blogFormContainer,
-  blogForm,
-  cancelBlogBtn,
-  authState,
-});
+// //console.log("Initial DOM elements:", {
+//   blogGrid,
+//   createBlogBtn,
+//   blogFormContainer,
+//   blogForm,
+//   cancelBlogBtn,
+//   authState,
+// });
 
 /* ==========================================================================
    Spell Checker Module
@@ -144,10 +144,10 @@ Quill.register(
    ========================================================================== */
 function initializeQuill() {
   if (quillEditor) return;
-  console.log("Initializing Quill...");
+  //console.log("Initializing Quill...");
   const editorElement = document.querySelector("#blog-content-editor");
   if (!editorElement) {
-    console.error("blog-content-editor not found");
+    //console.error("blog-content-editor not found");
     return;
   }
   quillEditor = new Quill("#blog-content-editor", {
@@ -231,7 +231,7 @@ function initializeQuill() {
    Fetches blog posts from the server or falls back to local data if server fails.
    ========================================================================== */
 async function loadBlogs() {
-  console.log("Loading blogs...");
+  //console.log("Loading blogs...");
   for (let attempt = 1; attempt <= API_CONFIG.maxRetries; attempt++) {
     try {
       const response = await fetch(`${API_CONFIG.baseUrl}/api/blogs`, {
@@ -241,26 +241,26 @@ async function loadBlogs() {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const blogs = await response.json();
-      console.log("Blogs fetched from server:", blogs);
+      //console.log("Blogs fetched from server:", blogs);
       renderBlogs(blogs);
       return;
     } catch (error) {
-      console.error(`Attempt ${attempt} failed:`, error);
+      //console.error(`Attempt ${attempt} failed:`, error);
       if (attempt === API_CONFIG.maxRetries) {
-        console.warn("Server fetch failed, attempting local data fallback...");
+        // //console.warn("Server fetch failed, attempting local data fallback...");
         try {
           const localResponse = await fetch(API_CONFIG.localDataPath);
           if (!localResponse.ok) {
-            throw new Error(`Local data fetch failed: ${localResponse.status}`);
+            // throw new Error(`Local data fetch failed: ${localResponse.status}`);
           }
           const localBlogs = await localResponse.json();
-          console.log("Blogs fetched from local data:", localBlogs);
+          // //console.log("Blogs fetched from local data:", localBlogs);
           renderBlogs(localBlogs);
-          showModal("Loaded local blog data due to server unavailability");
+          // showModal("Loaded local blog data due to server unavailability");
           return;
         } catch (localError) {
-          console.error("Local data fetch failed:", localError);
-          showModal("Failed to load blogs from server or local data", true);
+          // //console.error("Local data fetch failed:", localError);
+          // showModal("Failed to load blogs from server or local data", true);
         }
       } else {
         await new Promise((resolve) =>
@@ -276,9 +276,9 @@ async function loadBlogs() {
    Renders blog posts in the grid with show more/less, edit, and delete options.
    ========================================================================== */
 function renderBlogs(blogs) {
-  console.log("Rendering blogs:", blogs);
+  //console.log("Rendering blogs:", blogs);
   if (!blogGrid) {
-    console.error("blogGrid element not found");
+    //console.error("blogGrid element not found");
     return;
   }
   blogGrid.innerHTML = "";
@@ -399,7 +399,7 @@ async function handleBlogSubmit(event) {
       showModal(error.error || "Failed to save blog", true);
     }
   } catch (error) {
-    console.error("Error saving blog:", error);
+    //console.error("Error saving blog:", error);
     showModal("Failed to save blog", true);
   }
 }
@@ -417,7 +417,7 @@ async function editBlog(blogId) {
     blogForm.dataset.blogId = blogId;
     blogFormContainer.style.display = "block";
   } catch (error) {
-    console.error("Error loading blog for edit:", error);
+    //console.error("Error loading blog for edit:", error);
     showModal("Failed to load blog", true);
   }
 }
@@ -444,7 +444,7 @@ async function deleteBlog(blogId) {
         showModal(error.error || "Failed to delete blog", true);
       }
     } catch (error) {
-      console.error("Error deleting blog:", error);
+      //console.error("Error deleting blog:", error);
       showModal("Failed to delete blog", true);
     }
   }
@@ -455,7 +455,7 @@ async function deleteBlog(blogId) {
    Initializes the blog module, including Quill, blog loading, and event listeners.
    ========================================================================== */
 async function initializeBlog() {
-  console.log("Attempting to initialize blog module...");
+  //console.log("Attempting to initialize blog module...");
   const startTime = Date.now();
   let initialized = false;
 
@@ -466,14 +466,14 @@ async function initializeBlog() {
     blogForm = document.getElementById("blog-form");
     cancelBlogBtn = document.getElementById("cancel-blog");
 
-    console.log("Checking DOM elements:", {
-      blogGrid,
-      createBlogBtn,
-      blogFormContainer,
-      blogForm,
-      cancelBlogBtn,
-      authState,
-    });
+    // //console.log("Checking DOM elements:", {
+    //   blogGrid,
+    //   createBlogBtn,
+    //   blogFormContainer,
+    //   blogForm,
+    //   cancelBlogBtn,
+    //   authState,
+    // });
 
     return (
       blogGrid &&
@@ -487,24 +487,24 @@ async function initializeBlog() {
   // Poll for DOM elements
   while (Date.now() - startTime < API_CONFIG.initTimeout) {
     if (checkDOM()) {
-      console.log("All DOM elements found, initializing...");
+      //console.log("All DOM elements found, initializing...");
       initialized = true;
       break;
     }
-    console.warn(
-      "Some DOM elements missing, retrying in",
-      API_CONFIG.pollInterval,
-      "ms..."
-    );
+    // //console.warn(
+    //   "Some DOM elements missing, retrying in",
+    //   API_CONFIG.pollInterval,
+    //   "ms..."
+    // );
     await new Promise((resolve) =>
       setTimeout(resolve, API_CONFIG.pollInterval)
     );
   }
 
   if (!initialized) {
-    console.error(
-      "Initialization failed: DOM elements not found after timeout"
-    );
+    // //console.error(
+    //   "Initialization failed: DOM elements not found after timeout"
+    // );
     showModal("Failed to initialize blog module", true);
     return;
   }
@@ -515,7 +515,7 @@ async function initializeBlog() {
 
   // Add event listeners
   createBlogBtn.addEventListener("click", () => {
-    console.log("Create Blog button clicked, authState:", authState);
+    //console.log("Create Blog button clicked, authState:", authState);
     blogForm.reset();
     if (quillEditor) {
       quillEditor.setContents([]);
@@ -525,7 +525,7 @@ async function initializeBlog() {
   });
 
   cancelBlogBtn.addEventListener("click", () => {
-    console.log("Cancel button clicked");
+    //console.log("Cancel button clicked");
     blogFormContainer.style.display = "none";
     blogForm.reset();
     if (quillEditor) {
@@ -539,10 +539,10 @@ async function initializeBlog() {
   // Check admin controls visibility
   const adminControls = document.getElementById("admin-controls");
   if (authState.user && authState.user.role === "admin") {
-    console.log("User is admin, showing admin controls");
+    //console.log("User is admin, showing admin controls");
     adminControls.style.display = "block";
   } else {
-    console.log("User is not admin, hiding admin controls");
+    //console.log("User is not admin, hiding admin controls");
     adminControls.style.display = "none";
   }
 }
@@ -552,13 +552,13 @@ async function initializeBlog() {
    Sets up listeners for DOM content loading, SPA route changes, and fallback init.
    ========================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOMContentLoaded fired");
+  //console.log("DOMContentLoaded fired");
   initializeBlog();
 });
 
 // Handle SPA route changes (e.g., #blog)
 window.addEventListener("hashchange", () => {
-  console.log("Hash changed to:", window.location.hash);
+  //console.log("Hash changed to:", window.location.hash);
   if (window.location.hash === "#blog") {
     initializeBlog();
   }
@@ -566,6 +566,6 @@ window.addEventListener("hashchange", () => {
 
 // Fallback: Try initializing after a short delay
 setTimeout(() => {
-  console.log("Fallback initialization attempt");
+  //console.log("Fallback initialization attempt");
   initializeBlog();
 }, 2000);
