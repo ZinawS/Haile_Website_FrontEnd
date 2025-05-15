@@ -13,6 +13,7 @@ $blue-300: #93c5fd;
 $blue-100: #dbeafe;
 $success-green: #4caf50;
 $error-red: #f44336;
+@use "sass:color";
 
 /* ==========================================================================
    Animation Mixins
@@ -156,7 +157,7 @@ $error-red: #f44336;
   border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background: darken($success-green, 10%);
+    background: color.adjust($success-green, $lightness: -10%);
   }
 }
 .toggle-form {
