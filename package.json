@@ -1,4 +1,4 @@
-{
+{  
   "name": "frontend",
   "version": "1.0.0",
   "main": "index.js",
@@ -43,5 +43,5 @@
   "bugs": {
     "url": "https://github.com/ZinawS/Haile_Website_FrontEnd/issues"
   },
-  "homepage": "https://github.com/ZinawS/Haile_Website_FrontEnd#readme"
+ "homepage": "https://zinaws.github.io/Haile_Website_FrontEnd"
 }
